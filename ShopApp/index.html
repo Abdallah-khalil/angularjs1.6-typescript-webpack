@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShopApp" ng-strict-di>
+
+<head>
+    <base href="/" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="exotica market shop">
+    <meta name="author" content="SellTime ">
+    <title>Exotica Market Shop</title>
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet">
+    <link href="assets/css/ui.css" rel="stylesheet">
+    <!-- BEGIN ANGULARJS STYLE -->
+    <link href="assets/css/angular-theme.css" rel="stylesheet">
+    <!-- END ANGULARJS STYLE -->
+    <!-- BEGIN LAYOUT STYLE -->
+    <link href="assets/css/layout.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+
+    <!-- BEGIN LAYOUT STYLE -->
+    <link href="assets/css/loading-bar.min.css" rel="stylesheet" />
+    <link href="assets/css/please-wait.css" rel="stylesheet" />
+    <link href="assets/css/custom.css" rel="stylesheet" />
+
+</head>
+
+<!-- BEGIN BODY -->
+
+<body cmelo-sticky class="sidebar-dark fixed-topbar color-purple theme-sdtl">
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <section id="mainContent">
+        <div data-ui-view="" data-autoscroll="true"></div>
+    </section>
+
+
+    <a href="#" class="scrollup" scroll-up><i class="fa fa-angle-up"></i></a>
+
+
+
+
+    <!-- Splash Screen -->
+    <script src="/assets/js/please-wait.min.js"></script>
+    <script type="text/javascript">
+        window.loading_screen = window.pleaseWait({
+            logo: "/Assets/img/loading-screen.gif",
+            backgroundColor: 'rgb(37, 37, 37)',
+            loadingHtml: ""
+        });
+    </script>
+
+    <script src="http://localhost:3000/vendor.bundle.js"></script>
+    <script src="http://localhost:3000/main.bundle.js"></script> 
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<div class="dt-toolbar-footer">
+    <div class="col-sm-6 col-xs-12 hidden-xs">
+        <div class="dataTables_info p-10" id="DataTables_Table_1_info" role="status" aria-live="polite">Showing Page  <span class="badge badge-primary"> {{currentPage}} </span>  From <span class="badge badge-primary"> {{pages.length}} </span> Pages</div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="dataTables_paginate paging_simple_numbers" ng-if="pages.length >= 2">
+            <ul class="pagination">
+                <li class="paginate_button" ng-if="currentPage > 1">
+                    <a ng-click="selectPage(1)"><i class="fa fa-angle-double-left fa-lg c-purple" aria-hidden="true"></i></a>
+                </li>
+                <li class="paginate_button" ng-if="currentPage > 1">
+                    <a ng-click="selectPage(currentPage-1)"><i class="fa fa-angle-left fa-lg c-purple" aria-hidden="true"></i></a>
+                </li>
+                <li class="paginate_button" ng-repeat="page in pages" ng-class="{active: page==currentPage}">
+                    <a ng-click="selectPage(page)">{{page}}</a>
+                </li>
+                <li class="paginate_button" ng-if="currentPage < numPages">
+                    <a ng-click="selectPage(currentPage+1)"><i class="fa fa-angle-right fa-lg c-purple" aria-hidden="true"></i></a>
+                </li>
+                <li class="paginate_button" ng-if="currentPage < numPages">
+                    <a ng-click="selectPage(numPages)"><i class="fa fa-angle-double-right fa-lg c-purple" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+

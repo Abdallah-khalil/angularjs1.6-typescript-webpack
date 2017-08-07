@@ -1,0 +1,34 @@
+ <!-- BEGIN NOTIFICATION DROPDOWN -->
+<li class="dropdown" id="shoppingCart-drop">
+    <a href="#" data-toggle="dropdown" class="a-drop c-purple" data-hover="dropdown" data-close-others="true" data-tooltip-placement="bottom" data-uib-tooltip="View Cart">
+        <i class="icon-basket fa-2x"></i>
+        <span class="badge badge-info badge-header">{{ ngCart.getTotalItems() }}</span>
+
+    </a>
+    <ul class="dropdown-menu  dropdown-cart" role="menu">
+        <li ng-repeat="item in ngCart.getCart().items track by $index">
+            <span class="item">
+                <span class="item-left">
+                    <img src="" alt="" />
+                    <span class="item-info">
+                        <span>{{ item.getName() }}</span>
+                        <span class="label label-primary">{{ item.getData().type }}</span>
+                    </span>
+                </span>
+                <span class="item-right">
+                    <span class="label label-primary pull-right m-t-12">{{ item.getPrice() | currency}}</span>
+                </span>
+            </span>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <span class="item">
+                <span class="item-left">Total : </span>
+                <span class="item-right">{{ ngCart.totalCost() | currency }}</span>
+            </span>
+        </li>
+        <li class="divider"></li>
+        <li><a class="btn  btn-md m-l-10 btn-primary" ui-sref="app.shoppingCart">View Cart</a></li>
+    </ul>
+</li>
+<!-- END NOTIFICATION DROPDOWN -->

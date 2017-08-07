@@ -1,0 +1,47 @@
+ <!-- BEGIN SIDEBAR -->
+<div class="sidebar">
+    <div class="logopanel">
+        <h1>
+            <a data-ui-sref="start" class="c-dark">Exotica <span class="w-300 c-primary">Market</span></a>
+        </h1>
+    </div>
+    <!-- SIDE BAR MAIN MENU NAVIGATION-->
+    <h4 class="m-20 m-t-10 label label-primary">Change View :</h4>
+    <div class="panel m-20 m-t-10 panel-sidebar">
+        <div class="panel-content">
+            <ul class="nav nav-sidebar">
+                <li class="active" ng-class="{'active': $root.showProductGrid }">
+                    <a class="c-gray" ng-click="$ctrl.changeView();"><i class="fa fa-th p-r-10"></i><span>Grid View</span></a>
+                </li>
+                <li ng-class="{'active': $root.showProductList }">
+                    <a class="c-gray" ng-click="$ctrl.changeView();"><i class="fa fa-th-list p-r-10"></i><span>List View</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <h4 class="m-20 label label-primary">Change Category :</h4>
+    <div class="panel m-20 m-t-10 panel-sidebar">
+        <div class="panel-content">
+            <ul class="nav nav-sidebar">
+                <li><a class="c-gray"><i class="icon-screen-tablet p-r-10"></i><span>Books</span></a></li>
+                <li><a class="c-gray"><i class="icon-list p-r-10"></i><span>Flowers</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h4 class="m-20 label label-primary">Main Links :</h4>
+    <div class="sidebar-inner" custom-scroll sidebar-item-hover toggle-sidebar-menu>
+        <!-- SIDE BAR MAIN MENU NAVIGATION-->
+        <ul class="nav nav-sidebar">
+            <li data-ui-sref-active="active"><a data-ui-sref="start"><i class="icon-home"></i><span>Home Page</span></a></li>
+            <!--<li data-ui-sref-active="active"><a data-ui-sref="app.shop"><i class="icon-layers"></i><span>Shop</span></a></li>-->
+        </ul>
+        <!-- SIDEBAR FOOTER -->
+        <div class="sidebar-footer clearfix">
+        </div>
+
+    </div>
+    <!-- END SIDEBAR -->
+</div>
