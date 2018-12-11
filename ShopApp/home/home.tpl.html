@@ -36,7 +36,8 @@
             </section>
             <section class="panel-content row">
                 <div class="col-xs-12 p-10">
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xs-12 product-item" ng-repeat="product in $ctrl.displayProducts">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xs-12 product-item" 
+                    ng-repeat="product in $ctrl.displayProducts">
                         <div class="col-item panel">
                             <div class="photo bg-light-purple">
                                 <img ng-src="{{ product.image }}" class="img-responsive p-10 slider-image" alt="a" />
@@ -63,7 +64,6 @@
                                             <ngcart-addtocart template-url="/app/shop/views/partials/addToCart.tpl.html" id="{{ product.id }}"
                                                               name="{{ product.name }}" price="{{  product.price }}"
                                                               quantity="1" quantity-max="30" data="product">
-
                                             </ngcart-addtocart>
                                         </td>
                                     </tr>
